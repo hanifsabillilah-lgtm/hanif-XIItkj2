@@ -1,0 +1,525 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8fc;
+    color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    background: white;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #063b79;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    font-size: 19px;
+}
+
+.logo p {
+    font-size: 11px;
+    color: #777;
+    margin-top: 4px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #f5a000;
+}
+
+.btn-nav {
+    background: #063b79;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    min-height: 570px;
+    padding: 80px 7%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: linear-gradient(120deg, #e6f1ff, #ffffff);
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.badge {
+    display: inline-block;
+    background: #ffcc00;
+    color: #063b79;
+    padding: 10px 16px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hero-content h1 {
+    color: #063b79;
+    font-size: 46px;
+    line-height: 1.3;
+    margin-top: 25px;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: #f39c12;
+}
+
+.hero-content p {
+    color: #666;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+.hero-button {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-outline {
+    padding: 14px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #063b79;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #f39c12;
+}
+
+.btn-outline {
+    border: 2px solid #063b79;
+    color: #063b79;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* SECTION UMUM */
+.section {
+    padding: 80px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading span {
+    color: #f39c12;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    color: #063b79;
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: #777;
+    line-height: 1.7;
+}
+
+/* PROFIL */
+.profil {
+    background: white;
+}
+
+.profil-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: center;
+    line-height: 1.8;
+}
+
+.profil-text h3 {
+    color: #063b79;
+    margin-bottom: 15px;
+}
+
+.profil-text p {
+    margin-bottom: 15px;
+}
+
+.profil-box {
+    background: #063b79;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.profil-box h3 {
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+.profil-box small {
+    display: block;
+    margin-top: 15px;
+    color: #dbeafe;
+}
+
+/* JURUSAN */
+.jurusan {
+    background: #edf4fc;
+}
+
+.jurusan-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.jurusan-card {
+    background: white;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.jurusan-card:hover {
+    transform: translateY(-8px);
+}
+
+.icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.jurusan-card h3 {
+    color: #063b79;
+    margin-bottom: 12px;
+}
+
+.jurusan-card p {
+    color: #777;
+    line-height: 1.7;
+}
+
+.catatan {
+    text-align: center;
+    color: #777;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+/* KEUNGGULAN */
+.keunggulan {
+    background: white;
+}
+
+.keunggulan-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.keunggulan-item {
+    text-align: center;
+    padding: 25px;
+    background: #f5f8fc;
+    border-radius: 15px;
+}
+
+.keunggulan-item h3 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.keunggulan-item h4 {
+    color: #063b79;
+    margin-bottom: 12px;
+}
+
+.keunggulan-item p {
+    color: #777;
+    line-height: 1.7;
+}
+
+/* PERSYARATAN */
+.persyaratan {
+    background: #edf4fc;
+}
+
+.syarat-box {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    border-left: 6px solid #ffcc00;
+    line-height: 2;
+}
+
+.syarat-box h3 {
+    color: #063b79;
+    margin-bottom: 15px;
+}
+
+.syarat-box ul {
+    padding-left: 25px;
+}
+
+.jadwal-title {
+    margin-top: 25px;
+}
+
+/* PENDAFTARAN */
+.pendaftaran {
+    background: white;
+}
+
+#formPendaftaran {
+    max-width: 650px;
+    margin: auto;
+    padding: 35px;
+    background: #f5f8fc;
+    border-radius: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #063b79;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #063b79;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background: #063b79;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background: #f39c12;
+}
+
+.form-note {
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* KONTAK */
+.kontak {
+    background: #063b79;
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+    line-height: 2;
+}
+
+.kontak h2 {
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer {
+    background: #082c50;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    line-height: 2;
+}
+
+footer h3 {
+    color: #ffcc00;
+}
+
+.copyright {
+    border-top: 1px solid #52677d;
+    margin-top: 20px;
+    padding-top: 15px;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 18px;
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-button {
+        justify-content: center;
+    }
+
+    .profil-content {
+        grid-template-columns: 1fr;
+    }
+
+    .jurusan-container,
+    .keunggulan-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .logo h2 {
+        font-size: 15px;
+    }
+
+    .btn-nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 55px 6%;
+    }
+
+    .hero-content h1 {
+        font-size: 29px;
+    }
+
+    .hero-image img {
+        height: 220px;
+    }
+
+    .section {
+        padding: 60px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    #formPendaftaran {
+        padding: 22px;
+    }
+}
